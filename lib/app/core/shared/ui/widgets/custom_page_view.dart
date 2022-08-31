@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../../_design_system/components/custom_bottom_navigation_bar_component.dart';
+import '../../../../_design_system/widgets/bottom_navigation_bar/custom_bottom_navigation_bar.dart';
+import '../../../../modules/feed/presentation/router/feed_router.dart';
 import '../controllers/custom_bottom_navigation_bar_controller.dart';
 
 class CustomPageView extends StatefulWidget {
@@ -22,7 +23,7 @@ class _CustomPageViewState extends State<CustomPageView> {
       physics: const NeverScrollableScrollPhysics(),
       controller: controller.pageController,
       children: [
-        //const HomeRouter(),
+        const FeedRouter(),
         Scaffold(
           body: const Center(
             child: Text('Search'),
@@ -30,14 +31,14 @@ class _CustomPageViewState extends State<CustomPageView> {
           bottomNavigationBar: ValueListenableBuilder<int>(
             valueListenable: controller,
             builder: (context, value, _) {
-              return CustomBottomNavigationBarComponent(
+              return CustomBottomNavigationBar(
                 currentIndex: value,
                 onTap: (value) => controller.changePage(value),
               );
             },
           ),
         ),
-        //const CartRouter(),
+        Container(),
         Scaffold(
           body: const Center(
             child: Text('Profile'),
@@ -45,7 +46,7 @@ class _CustomPageViewState extends State<CustomPageView> {
           bottomNavigationBar: ValueListenableBuilder<int>(
             valueListenable: controller,
             builder: (context, value, _) {
-              return CustomBottomNavigationBarComponent(
+              return CustomBottomNavigationBar(
                 currentIndex: value,
                 onTap: (value) => controller.changePage(value),
               );
@@ -59,7 +60,7 @@ class _CustomPageViewState extends State<CustomPageView> {
           bottomNavigationBar: ValueListenableBuilder<int>(
             valueListenable: controller,
             builder: (context, value, _) {
-              return CustomBottomNavigationBarComponent(
+              return CustomBottomNavigationBar(
                 currentIndex: value,
                 onTap: (value) => controller.changePage(value),
               );

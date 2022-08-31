@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../consts/app_colors_const.dart';
-import '../consts/app_svgs_const.dart';
+import '../../consts/app_colors_const.dart';
+import '../../consts/app_icons_const.dart';
 
-class CustomBottomNavigationBarComponent extends StatefulWidget {
-  const CustomBottomNavigationBarComponent({
+class CustomBottomNavigationBar extends StatefulWidget {
+  const CustomBottomNavigationBar({
     Key? key,
     this.onTap,
     required this.currentIndex,
@@ -15,59 +14,61 @@ class CustomBottomNavigationBarComponent extends StatefulWidget {
   final Function(int)? onTap;
 
   @override
-  State<CustomBottomNavigationBarComponent> createState() =>
-      _CustomBottomNavigationBarComponentState();
+  State<CustomBottomNavigationBar> createState() =>
+      _CustomBottomNavigationBarState();
 }
 
-class _CustomBottomNavigationBarComponentState
-    extends State<CustomBottomNavigationBarComponent> {
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      color: Colors.orange,
+      elevation: 10,
       shape: const CircularNotchedRectangle(),
       notchMargin: 4,
       clipBehavior: Clip.antiAlias,
       child: SizedBox(
         height: kBottomNavigationBarHeight,
         child: BottomNavigationBar(
+            backgroundColor: Colors.green,
             currentIndex: widget.currentIndex,
             onTap: widget.onTap,
             items: [
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppSvgsConst.calendar,
+                icon: Image.asset(
+                  AppIconsConst.headerMenu,
                   height: 20,
                   color: AppColorsConst.strongGray,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppSvgsConst.chat,
+                icon: Image.asset(
+                  AppIconsConst.add,
                   height: 20,
                   color: AppColorsConst.strongGray,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppSvgsConst.chat,
+                icon: Image.asset(
+                  AppIconsConst.account,
                   height: 20,
                   color: AppColorsConst.grey,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppSvgsConst.landscape,
+                icon: Image.asset(
+                  AppIconsConst.notification,
                   height: 20,
                   color: AppColorsConst.strongGray,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppSvgsConst.avatar,
+                icon: Image.asset(
+                  AppIconsConst.headerMenuWhite,
                   height: 20,
                   color: AppColorsConst.strongGray,
                 ),

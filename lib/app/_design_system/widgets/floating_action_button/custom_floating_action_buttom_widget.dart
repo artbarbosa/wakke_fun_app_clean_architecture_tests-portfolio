@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wakke_fun_app/app/_design_system/consts/app_logos_const.dart';
+
+import '../../consts/app_logos_const.dart';
 
 class CustomFloatingActionButtonWidget extends StatelessWidget {
   const CustomFloatingActionButtonWidget({super.key});

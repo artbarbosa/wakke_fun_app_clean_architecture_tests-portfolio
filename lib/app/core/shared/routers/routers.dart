@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../ui/containers/app_container.dart';
+
 class Routers {
-  static String get initialRoute => '/splash';
+  static String get initialRoute => '/';
 
   static Map<String, Widget Function(BuildContext, dynamic)> routes = {
+    '/': (context, arguments) => const AppContainer(),
     //'/splash': (context, arguments) => const SplashRouter(),
-    //'/': (context, arguments) => const AppContainer(),
   };
 
   static Route? generateRoutes(RouteSettings settings) {
