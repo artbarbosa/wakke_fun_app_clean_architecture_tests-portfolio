@@ -18,7 +18,7 @@ class FeedController extends ValueNotifier<FeedState> {
     notifyListeners();
   }
 
-  Future<void> fetchProducts() async {
+  Future<void> fetchQuizzes() async {
     value = FeedLoadingState();
     try {
       await _getQuizzes();

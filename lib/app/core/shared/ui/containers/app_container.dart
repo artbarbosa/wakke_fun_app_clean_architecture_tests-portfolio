@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:wakke_fun_app/app/_design_system/consts/app_images_const.dart';
 
+import '../../../../_design_system/widgets/bottom_navigation_bar/custom_bottom_navigation_bar.dart';
+import '../controllers/custom_bottom_navigation_bar_controller.dart';
 import '../widgets/custom_page_view.dart';
 
 class AppContainer extends StatefulWidget {
@@ -10,14 +14,33 @@ class AppContainer extends StatefulWidget {
 }
 
 class _AppContainerState extends State<AppContainer> {
+  final controllerBottomNavigation =
+      GetIt.I.get<CustomBottomNavigationBarController>();
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
         return false;
       },
-      child: const Scaffold(
-        body: CustomPageView(),
+      child: Scaffold(
+        body: const CustomPageView(),
+        bottomNavigationBar: ValueListenableBuilder<int>(
+          valueListenable: controllerBottomNavigation,
+          builder: (context, value, _) {
+            return CustomBottomNavigationBar(
+              currentIndex: value,
+              onTap: (value) => controllerBottomNavigation.changePage(value),
+            );
+          },
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Image.asset(AppImagesConst.buttonFun),
+          onPressed: () {
+            controllerBottomNavigation.changePage(2);
+          },
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     );
   }

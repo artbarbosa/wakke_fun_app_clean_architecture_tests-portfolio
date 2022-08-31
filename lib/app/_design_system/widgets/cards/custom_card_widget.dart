@@ -6,8 +6,8 @@ import '../../consts/app_icons_const.dart';
 import '../../consts/app_images_const.dart';
 import '../circle_avatar/custom_circular_photo.dart';
 
-class MuralContent extends StatelessWidget {
-  const MuralContent({super.key});
+class CustomCard extends StatelessWidget {
+  const CustomCard({super.key});
 
   onPressed() {}
   @override

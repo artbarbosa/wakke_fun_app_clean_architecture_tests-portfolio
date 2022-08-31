@@ -22,59 +22,49 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.orange,
-      elevation: 10,
       shape: const CircularNotchedRectangle(),
-      notchMargin: 4,
       clipBehavior: Clip.antiAlias,
-      child: SizedBox(
-        height: kBottomNavigationBarHeight,
-        child: BottomNavigationBar(
-            backgroundColor: Colors.green,
-            currentIndex: widget.currentIndex,
-            onTap: widget.onTap,
-            items: [
-              BottomNavigationBarItem(
-                icon: Image.asset(
-                  AppIconsConst.headerMenu,
-                  height: 20,
-                  color: AppColorsConst.strongGray,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Image.asset(
-                  AppIconsConst.add,
-                  height: 20,
-                  color: AppColorsConst.strongGray,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Image.asset(
-                  AppIconsConst.account,
-                  height: 20,
-                  color: AppColorsConst.grey,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Image.asset(
-                  AppIconsConst.notification,
-                  height: 20,
-                  color: AppColorsConst.strongGray,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Image.asset(
-                  AppIconsConst.headerMenuWhite,
-                  height: 20,
-                  color: AppColorsConst.strongGray,
-                ),
-                label: '',
-              ),
-            ]),
+      child: BottomNavigationBar(
+        currentIndex: widget.currentIndex,
+        onTap: widget.onTap,
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              AppIconsConst.headerMenu,
+              height: 20,
+              color: AppColorsConst.strongGray,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              AppIconsConst.add,
+              height: 20,
+              color: AppColorsConst.strongGray,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Container(),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              AppIconsConst.account,
+              height: 20,
+              color: AppColorsConst.strongGray,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              AppIconsConst.notification,
+              height: 20,
+              color: AppColorsConst.strongGray,
+            ),
+            label: '',
+          ),
+        ],
       ),
     );
   }
