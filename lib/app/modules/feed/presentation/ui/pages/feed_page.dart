@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wakke_fun_app/app/_design_system/consts/app_icons_const.dart';
 import 'package:wakke_fun_app/app/_design_system/text_styles/text_styles_const.dart';
+import 'package:wakke_fun_app/app/modules/details/presentation/routers/detail_arguments.dart';
 
 import '../../../../../_design_system/widgets/cards/custom_card_feed_widget.dart';
 import '../../../../../_design_system/widgets/cards/custom_card_top_ten_widget.dart';
@@ -79,17 +80,23 @@ class FeedPage extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: listQuizzes.length,
-              itemBuilder: (context, index) => CustomCardFeedWidget(
-                borderColor: listQuizzes[index].userAuthorBorderModel != null
-                    ? listQuizzes[index].userAuthorBorderModel!.color1
-                    : '#9E9E9E',
-                photo: listQuizzes[index].userAuthorImageProfile ?? '',
-                tittle: listQuizzes[index].userAuthorName,
-                coverImage: listQuizzes[index].coverImage,
-                gamesExecutedQty: listQuizzes[index].gamesExecutedQty,
-                commentsQty: listQuizzes[index].commentsQty,
-                evaluationGrade: listQuizzes[index].evaluationGrade,
-                description: listQuizzes[index].description,
+              itemBuilder: (context, index) => InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/detail',
+                      arguments: DetailArguments(quiz: listQuizzes[index]));
+                },
+                child: CustomCardFeedWidget(
+                  borderColor: listQuizzes[index].userAuthorBorderModel != null
+                      ? listQuizzes[index].userAuthorBorderModel!.color1
+                      : '#9E9E9E',
+                  photo: listQuizzes[index].userAuthorImageProfile ?? '',
+                  tittle: listQuizzes[index].userAuthorName,
+                  coverImage: listQuizzes[index].coverImage,
+                  gamesExecutedQty: listQuizzes[index].gamesExecutedQty,
+                  commentsQty: listQuizzes[index].commentsQty,
+                  evaluationGrade: listQuizzes[index].evaluationGrade,
+                  description: listQuizzes[index].description,
+                ),
               ),
             ),
           ),

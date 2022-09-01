@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../modules/details/presentation/routers/detail_router.dart';
 import '../../../modules/splash/presentation/routers/splash_router.dart';
 import '../ui/containers/app_container.dart';
 
@@ -9,6 +10,7 @@ class Routers {
   static Map<String, Widget Function(BuildContext, dynamic)> routes = {
     '/splash': (context, _) => const SplashRouter(),
     '/': (context, _) => const AppContainer(),
+    '/detail': (context, arguments) => DetailRouter(arguments: arguments),
   };
 
   static Route? generateRoutes(RouteSettings settings) {
