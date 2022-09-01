@@ -43,19 +43,26 @@ class FeedPage extends StatelessWidget {
                 itemCount: 10,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => CustomCardTopTenWidget(
-                  coverImage: listQuizzes[index + 10].coverImage,
-                  index: index,
-                  borderColor: listQuizzes[index + 10]
-                              .userAuthorBorderModel
-                              ?.color1 !=
-                          null
-                      ? listQuizzes[index + 10].userAuthorBorderModel!.color1
-                      : '#9E9E9E',
-                  userAuthorImageProfile:
-                      listQuizzes[index + 10].userAuthorImageProfile ?? '',
-                  userAuthorName: listQuizzes[index + 10].userAuthorName,
-                  description: listQuizzes[index + 10].description,
+                itemBuilder: (context, index) => InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/detail',
+                        arguments:
+                            DetailArguments(quiz: listQuizzes[index + 10]));
+                  },
+                  child: CustomCardTopTenWidget(
+                    coverImage: listQuizzes[index + 10].coverImage,
+                    index: index,
+                    borderColor: listQuizzes[index + 10]
+                                .userAuthorBorderModel
+                                ?.color1 !=
+                            null
+                        ? listQuizzes[index + 10].userAuthorBorderModel!.color1
+                        : '#9E9E9E',
+                    userAuthorImageProfile:
+                        listQuizzes[index + 10].userAuthorImageProfile ?? '',
+                    userAuthorName: listQuizzes[index + 10].userAuthorName,
+                    description: listQuizzes[index + 10].description,
+                  ),
                 ),
               ),
             ),

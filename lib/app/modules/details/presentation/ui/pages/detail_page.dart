@@ -149,11 +149,14 @@ class _DetailPageState extends State<DetailPage> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20, top: 5),
-                        child: Text(
-                          widget.quiz.description,
-                          style: TextStylesConst.descriptionCard,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20, top: 5),
+                          child: Text(
+                            widget.quiz.description,
+                            style: TextStylesConst.descriptionCard,
+                          ),
                         ),
                       ),
                       Padding(
