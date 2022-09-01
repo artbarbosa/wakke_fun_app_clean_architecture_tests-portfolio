@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 
 import '../../../modules/feed/presentation/ui/controllers/feed_controller.dart';
+import '../../../modules/splash/presentation/ui/controllers/splash_controller.dart';
 import '../../quiz/domain/repositories/quiz_repository_interface.dart';
 import '../../quiz/domain/usecases/get_quizzes_usecase.dart';
 import '../../quiz/external/datasources/quiz_datasourcer.dart';
@@ -30,9 +31,9 @@ class Inject {
       () => FeedController(getIt()),
     );
 
-    // getIt.registerFactory<SplashController>(
-    //   () => SplashController(),
-    // );
+    getIt.registerFactory<SplashController>(
+      () => SplashController(),
+    );
 
     getIt.registerLazySingleton<CustomBottomNavigationBarController>(
       () => CustomBottomNavigationBarController(2),

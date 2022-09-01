@@ -41,4 +41,10 @@ class TextStylesConst {
     fontWeight: FontWeight.w400,
     color: AppColorsConst.theme,
   );
+
+  static final drawerText = GoogleFonts.roboto(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
 }

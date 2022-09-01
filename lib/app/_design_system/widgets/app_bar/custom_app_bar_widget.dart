@@ -4,7 +4,7 @@ import 'package:wakke_fun_app/app/_design_system/consts/app_colors_const.dart';
 import 'package:wakke_fun_app/app/_design_system/consts/app_icons_const.dart';
 import 'package:wakke_fun_app/app/_design_system/consts/app_images_const.dart';
 
-class CustomAppBarWidget extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBarWidget extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
   const CustomAppBarWidget({
@@ -19,20 +19,16 @@ class CustomAppBarWidget extends StatelessWidget with PreferredSizeWidget {
       backgroundColor: Colors.white,
       centerTitle: true,
       title: SizedBox(
-        width: 100,
+        width: 120,
         child: Image.asset(
           AppImagesConst.logoWakkeRoxo,
+          width: 120,
         ),
       ),
       leading: IconButton(
         splashRadius: 20,
         onPressed: () {
-          Future.delayed(
-            const Duration(milliseconds: 100),
-            () {
-              scaffoldKey.currentState!.openDrawer();
-            },
-          );
+          scaffoldKey.currentState!.openDrawer();
         },
         icon: Image.asset(
           AppIconsConst.headerMenu,
@@ -56,7 +52,4 @@ class CustomAppBarWidget extends StatelessWidget with PreferredSizeWidget {
       ],
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

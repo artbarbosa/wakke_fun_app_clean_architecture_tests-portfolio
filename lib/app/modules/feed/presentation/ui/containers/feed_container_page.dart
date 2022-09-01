@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:wakke_fun_app/app/_design_system/consts/app_images_const.dart';
+import 'package:wakke_fun_app/app/_design_system/widgets/drawer/custom_drawer_widget.dart';
 import 'package:wakke_fun_app/app/modules/feed/presentation/ui/pages/feed_loading.dart';
 
 import '../../../../../_design_system/widgets/app_bar/custom_app_bar_widget.dart';
@@ -50,6 +52,9 @@ class _FeedContainerPageState extends State<FeedContainerPage> {
           }
           return const FeedLoadingPage();
         },
+      ),
+      drawer: CustomDrawerWidget(
+        photo: AppImagesConst.photoExample,
       ),
     );
   }

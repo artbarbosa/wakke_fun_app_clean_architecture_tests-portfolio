@@ -1,9 +1,6 @@
 class AppImagesConst {
   static String get buttonFun => "assets/images/button_fun.png";
   static String get logoWakkeRoxo => "assets/images/logo_wakke_roxo.png";
-
-  static String get ana => "assets/images/ana.png";
-  static String get camila => "assets/images/camila.png";
-  static String get startElvelOne => "assets/images/estrela_nivel_1.png";
-  static String get slideOne => "assets/images/slide_1.jpg";
+  static String get logoWakkeWhite => "assets/images/logo_wakke_branco.png";
+  static String get photoExample => "assets/images/img_user_ex_menu.png";
 }

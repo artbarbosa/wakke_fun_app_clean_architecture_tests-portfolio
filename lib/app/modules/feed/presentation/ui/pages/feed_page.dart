@@ -16,7 +16,6 @@ class FeedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
         children: [
