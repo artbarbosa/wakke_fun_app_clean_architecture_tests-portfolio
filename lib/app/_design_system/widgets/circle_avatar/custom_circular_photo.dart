@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:wakke_fun_app/app/core/shared/uttils/string_convert_to_color.dart';
 
 class CustomCircularPhoto extends StatelessWidget {
   final String photo;
-  const CustomCircularPhoto({super.key, required this.photo});
+  final String borderColor;
+  final double width;
+  final double height;
+  const CustomCircularPhoto(
+      {super.key,
+      required this.photo,
+      required this.borderColor,
+      this.width = 36,
+      this.height = 40});
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +19,11 @@ class CustomCircularPhoto extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          width: 36,
-          height: 40,
+          width: width,
+          height: height,
           decoration: BoxDecoration(
             border: Border.all(
-              color: Colors.red,
+              color: borderColor.toColor(),
               width: 1.5,
             ),
             borderRadius: BorderRadius.circular(10),

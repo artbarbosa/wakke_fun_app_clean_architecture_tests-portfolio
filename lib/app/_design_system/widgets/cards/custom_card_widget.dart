@@ -34,6 +34,7 @@ class CustomCard extends StatelessWidget {
                 children: [
                   CustomCircularPhoto(
                     photo: AppImagesConst.camila,
+                    borderColor: '',
                   ),
                   Positioned(
                     bottom: 27,

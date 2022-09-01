@@ -1,45 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wakke_fun_app/app/_design_system/consts/app_icons_const.dart';
+import 'package:wakke_fun_app/app/_design_system/consts/app_images_const.dart';
 
 class CustomAppBarWidget extends StatelessWidget with PreferredSizeWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
-  const CustomAppBarWidget(
-    this.scaffoldKey, {
+  const CustomAppBarWidget({
+    required this.scaffoldKey,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.white,
       centerTitle: true,
       title: SizedBox(
         width: 100,
         child: Image.asset(
-          'AppImagesConst.appBarTitle',
+          AppImagesConst.logoWakkeRoxo,
         ),
       ),
       leading: IconButton(
         splashRadius: 20,
         onPressed: () {
-          Future.delayed(const Duration(milliseconds: 100), () {
-            scaffoldKey.currentState!.openDrawer();
-          });
+          Future.delayed(
+            const Duration(milliseconds: 100),
+            () {
+              scaffoldKey.currentState!.openDrawer();
+            },
+          );
         },
-        icon: SvgPicture.asset(
-          'AppImagesConst.appBarMenu',
-          height: 16,
-          color: Theme.of(context).colorScheme.onPrimary,
+        icon: Image.asset(
+          AppIconsConst.headerMenu,
+          height: 20,
         ),
       ),
       actions: [
+        SvgPicture.asset(
+          AppIconsConst.fixed,
+          height: 22,
+        ),
+        const SizedBox(width: 5),
         IconButton(
-          splashRadius: 20,
           onPressed: () {},
-          icon: SvgPicture.asset(
-            'AppImagesConst.appBarSearch',
-            height: 18,
-            color: Theme.of(context).colorScheme.onPrimary,
+          icon: Image.asset(
+            AppIconsConst.search,
+            height: 22,
           ),
         )
       ],

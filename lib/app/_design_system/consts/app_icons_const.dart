@@ -5,4 +5,6 @@ class AppIconsConst {
   static String get add => "assets/icons/icon_add.png";
   static String get account => "assets/icons/icon_account.png";
   static String get notification => "assets/icons/icon_notificacoes.png";
+  static String get fixed => "assets/icons/fixar.svg";
+  static String get search => "assets/icons/icon_header_search.png";
 }

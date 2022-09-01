@@ -1,6 +1,7 @@
 import 'package:mocktail/mocktail.dart';
 import 'package:wakke_fun_app/app/core/quiz/domain/entities/quiz_entity.dart';
 import 'package:wakke_fun_app/app/core/quiz/infra/datasources/quiz_datasourcer_intereface.dart';
+import 'package:wakke_fun_app/app/core/quiz/infra/models/quiz_model.dart';
 import 'package:wakke_fun_app/app/core/quiz/infra/models/user_author_border_model.dart';
 import 'package:wakke_fun_app/app/core/quiz/infra/models/user_author_icon_model.dart';
 import 'package:wakke_fun_app/app/core/shared/services/remote/http_client_service_interface.dart';
@@ -9,7 +10,7 @@ class IQuizDataSourceMock extends Mock implements IQuizDataSource {}
 
 class HttpServiceMock extends Mock implements IHttpService {}
 
-final quizEntityMokc = QuizEntity(
+final quizEntityMock = QuizEntity(
   id: 'id',
   isPrivate: true,
   activeStatus: true,
@@ -24,6 +25,36 @@ final quizEntityMokc = QuizEntity(
   canBeDeleted: true,
 );
 
+final quizModelMock = QuizModel(
+  id: 'id',
+  isPrivate: true,
+  activeStatus: true,
+  finished: true,
+  challengeId: 'challengeId',
+  title: 'title',
+  description: 'description',
+  userAuthorId: 'userAuthorId',
+  userAuthorName: 'userAuthorName',
+  userAuthorNickname: 'userAuthorNickname',
+  dateCreation: 'dateCreation',
+  canBeDeleted: true,
+  avarageCorrects: 2,
+  avarageGrade: 2,
+  averagePercentageCorrect: 2,
+  commentsQty: 1,
+  coverImage: '',
+  evaluationGrade: 2,
+  gamesExecutedQty: 1,
+  linkVideo: '',
+  mediumDuration: 2,
+  numeroNic: '',
+  userAuthorBorderModel: userAuthorBorderMock,
+  userAuthorIconModel: userAuthorIcon,
+  userAuthorImageProfile: '',
+);
+
+final listQuizzesModelMock = [quizModelMock];
+
 final userAuthorBorderMock = UserAuthorBorderModel(
   color1: '',
   color2: '',
@@ -36,7 +67,7 @@ final userAuthorIcon = UserAuthorIconModel(
   xpAmount: 150,
 );
 
-final listQuizEntityMock = [quizEntityMokc];
+final listQuizEntityMock = [quizEntityMock];
 
 final userAuthorBorderJsonMock = {
   "id": "demo-id-002",

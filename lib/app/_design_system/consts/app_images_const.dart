@@ -1,5 +1,6 @@
 class AppImagesConst {
   static String get buttonFun => "assets/images/button_fun.png";
+  static String get logoWakkeRoxo => "assets/images/logo_wakke_roxo.png";
 
   static String get ana => "assets/images/ana.png";
   static String get camila => "assets/images/camila.png";

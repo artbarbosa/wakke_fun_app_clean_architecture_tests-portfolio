@@ -28,9 +28,12 @@ class _FeedContainerPageState extends State<FeedContainerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
-        child: CustomAppBarWidget(_scaffoldKey),
+        child: CustomAppBarWidget(
+          scaffoldKey: _scaffoldKey,
+        ),
       ),
       body: ValueListenableBuilder(
         valueListenable: controller,
