@@ -35,4 +35,10 @@ class TextStylesConst {
     fontWeight: FontWeight.bold,
     color: AppColorsConst.theme,
   );
+
+  static final tittleFeed = GoogleFonts.roboto(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColorsConst.theme,
+  );
 }

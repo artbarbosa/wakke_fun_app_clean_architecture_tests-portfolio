@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wakke_fun_app/app/_design_system/consts/app_colors_const.dart';
 import 'package:wakke_fun_app/app/_design_system/consts/app_icons_const.dart';
 import 'package:wakke_fun_app/app/_design_system/consts/app_images_const.dart';
 
@@ -42,6 +43,7 @@ class CustomAppBarWidget extends StatelessWidget with PreferredSizeWidget {
         SvgPicture.asset(
           AppIconsConst.fixed,
           height: 22,
+          color: AppColorsConst.theme,
         ),
         const SizedBox(width: 5),
         IconButton(

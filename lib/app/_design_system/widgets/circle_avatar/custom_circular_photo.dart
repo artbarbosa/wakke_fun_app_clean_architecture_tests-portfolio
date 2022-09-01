@@ -26,12 +26,12 @@ class CustomCircularPhoto extends StatelessWidget {
               color: borderColor.toColor(),
               width: 1.5,
             ),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(6),
           ),
           child: Padding(
             padding: const EdgeInsets.all(1.5),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(6),
               child: Image.network(photo, fit: BoxFit.cover),
             ),
           ),
