@@ -30,7 +30,7 @@ class _SplashPageState extends State<SplashPage> {
     controllerPage.pageController =
         PageController(initialPage: 2, keepPage: true);
     return Scaffold(
-      backgroundColor: AppColorsConst.theme,
+      backgroundColor: AppColorsConst.primary,
       body: Center(
         child: Image.asset(
           AppImagesConst.logoWakkeWhite,

@@ -33,13 +33,13 @@ class TextStylesConst {
   static final numberCardHorizontalForeground = GoogleFonts.roboto(
     fontSize: 102,
     fontWeight: FontWeight.bold,
-    color: AppColorsConst.theme,
+    color: AppColorsConst.primary,
   );
 
   static final tittleFeed = GoogleFonts.roboto(
     fontSize: 15,
     fontWeight: FontWeight.w400,
-    color: AppColorsConst.theme,
+    color: AppColorsConst.primary,
   );
 
   static final drawerText = GoogleFonts.roboto(

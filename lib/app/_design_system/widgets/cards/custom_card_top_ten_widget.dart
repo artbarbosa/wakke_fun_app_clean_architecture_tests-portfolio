@@ -66,7 +66,7 @@ class CustomCardTopTenWidget extends StatelessWidget {
                   height: 55,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: AppColorsConst.theme,
+                    color: AppColorsConst.primary,
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: Padding(

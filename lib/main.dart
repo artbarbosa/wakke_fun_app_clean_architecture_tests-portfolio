@@ -8,7 +8,7 @@ import 'app/app_widget.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: AppColorsConst.theme,
+      statusBarColor: AppColorsConst.primary,
     ),
   );
   Inject.initialize();

@@ -39,7 +39,7 @@ class CustomAppBarWidget extends StatelessWidget {
         SvgPicture.asset(
           AppIconsConst.fixed,
           height: 22,
-          color: AppColorsConst.theme,
+          color: AppColorsConst.primary,
         ),
         const SizedBox(width: 5),
         IconButton(

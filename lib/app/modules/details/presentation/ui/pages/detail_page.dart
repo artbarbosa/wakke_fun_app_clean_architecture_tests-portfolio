@@ -6,6 +6,7 @@ import 'package:wakke_fun_app/app/_design_system/widgets/circle_avatar/custom_ci
 import 'package:wakke_fun_app/app/core/quiz/infra/models/quiz_model.dart';
 
 import '../../../../../_design_system/consts/app_icons_const.dart';
+import '../../../../../_design_system/widgets/cards/custom_card_author_widget.dart';
 import '../../../../../core/shared/ui/controllers/custom_bottom_navigation_bar_controller.dart';
 
 class DetailPage extends StatefulWidget {
@@ -96,41 +97,14 @@ class _DetailPageState extends State<DetailPage> {
                   child: Column(
                     children: [
                       const SizedBox(height: 10),
-                      Material(
-                        borderRadius: BorderRadius.circular(20),
-                        elevation: 10,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          width: currentSize.width * 0.8,
-                          height: 80,
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: CustomCircularPhoto(
-                                  height: 60,
-                                  width: 45,
-                                  photo:
-                                      widget.quiz.userAuthorImageProfile ?? '',
-                                  borderColor: widget.quiz.userAuthorBorderModel
-                                              ?.color1 !=
-                                          null
-                                      ? widget
-                                          .quiz.userAuthorBorderModel!.color1
-                                      : '#E9E9E9',
-                                ),
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                widget.quiz.userAuthorName,
-                                style: TextStylesConst.tittleCard,
-                              )
-                            ],
-                          ),
-                        ),
+                      CustomCardAuthorWidget(
+                        borderColor:
+                            widget.quiz.userAuthorBorderModel?.color1 != null
+                                ? widget.quiz.userAuthorBorderModel!.color1
+                                : '#E9E9E9',
+                        userAuthorImageProfile:
+                            widget.quiz.userAuthorImageProfile ?? '',
+                        userAuthorName: widget.quiz.userAuthorName,
                       ),
                       Padding(
                         padding:

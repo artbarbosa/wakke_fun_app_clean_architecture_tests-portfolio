@@ -13,7 +13,7 @@ class CustomDrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColorsConst.theme.withOpacity(0.8),
+      backgroundColor: AppColorsConst.primary.withOpacity(0.8),
       child: Padding(
         padding: const EdgeInsets.only(top: 80),
         child: SizedBox(
