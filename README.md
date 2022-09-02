@@ -7,7 +7,7 @@
 ## Definição e Padrões de Projetos
 
 # Flutter Version
-A Versão do flutter que é utilizada neste projeto foi a 3.0.5.
+A Versão do flutter que é utilizada neste projeto foi a 3.3.0.
 
 # Apresentão geral da Arquitetura
 O sistema foi dividido de forma modular, esses mesmo modulos podem conter submodules e cada modulo contém seu proprio sistema de arquitetura, cujo o utilizado neste projeto foi o Clean Dart.
