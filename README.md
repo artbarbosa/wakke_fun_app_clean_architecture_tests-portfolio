@@ -2,7 +2,7 @@
 
 ## Layout
 
-![WhatsApp-Video-2022-07-28-at-17 25 48]()
+Historical recording omitted because it showed captured sample data.
 
 ## Definição e Padrões de Projetos
 
