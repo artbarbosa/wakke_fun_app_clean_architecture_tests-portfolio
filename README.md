@@ -1,3 +1,21 @@
+# wakke_fun_app_clean_architecture_tests — sanitized portfolio copy
+
+Historical Flutter quiz-feed challenge with separated adapters, repositories and presentation code. Captured user identities, record IDs, descriptions and token-bearing media URLs have been replaced with synthetic fixtures; public placeholder images use Picsum Photos.
+
+## Setup and scope
+
+The feed uses synthetic local mock records, not production user data or original download tokens. It still needs internet for public placeholder images. Run the dependency-free fixture check with `dart --enable-asserts test/portfolio_fixture_safety_test.dart`.
+
+Use a Flutter/Dart version compatible with the checked-in `pubspec.yaml`; several projects require Dart 2. No SDK upgrade or passing application build is claimed by this publication.
+
+## History and provenance
+
+This new repository contains a sanitized copy of the original Git history. Original commit authors, committers and dates were preserved; affected hashes changed. The original repository stays private and unchanged. Provider credentials were removed from every retained branch before upload. This does not revoke the old credentials. No license or authorship was reassigned.
+
+Automated publication checks cover history metadata, sensitive-value removal and secret scanning. They do not establish provider availability, backend permissions, or a working build on current Flutter. Application tests not explicitly listed as run remain unverified.
+
+## Original project notes
+
 ## Wakke Fun App
 
 ## Layout
